@@ -1,11 +1,12 @@
 import file_writer
 import syntax_checker
+import lexer
 import sys
 
 def main(filename):
     file_writer.write_no_spaces(filename)
-    syntax_checker.check(filename)
-
+    lexer.generate_res_sym(filename)
+    
 if __name__ == "__main__":
     arg = sys.argv[1]
     if not arg.endswith(".HL"):
