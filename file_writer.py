@@ -1,5 +1,5 @@
 def write_no_spaces(filename):
-    """Read the file named by filename and write NO_SPACES.txt with spaces removed.
+    """Read the file named by filename and write NO_SPACES.txt as one line with spaces removed.
 
     Returns True on success, False if the file cannot be read or written.
     """
@@ -14,7 +14,7 @@ def write_no_spaces(filename):
         print(f"ERROR: file not found: {filename}")
         return False
 
-    no_spaces = contents.replace(" ", "")
+    no_spaces = "".join(contents.split())
 
     with open("NO_SPACES.txt", "w", encoding="utf-8") as output:
         output.write(no_spaces)
