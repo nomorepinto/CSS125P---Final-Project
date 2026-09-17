@@ -1,8 +1,12 @@
 import file_writer
+import lexer
+import syntax_checker
 import sys
 
 def main(filename):
     file_writer.write_no_spaces(filename)
+    lexer.lex(filename)
+    syntax_checker.check(filename)
 
 if __name__ == "__main__":
     arg = sys.argv[1]
