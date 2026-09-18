@@ -1,0 +1,14 @@
+RESERVED WORDS:
+integer
+double
+if
+output
+SYMBOLS:
+:=
+<<
+:
+;
+=
+<
+(
+)
